@@ -40,5 +40,26 @@
         { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 1},
         { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 2}
     ]
+},
+{ "match-names" : ["HP BIOS version 68IRR Ver. F.60 01/15/2015"],
+    "matches" : [
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
+        { "match-type" : "match-pos", "match-text" : "SetAdr:2", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
+        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 5}
+    ]
+},
+{ "match-names" : ["Nintendo Switch"],
+    "matches" : [
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-pos", "match-text" : "SetAdr:2", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 5},
+        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 6}
+    ]
 }
 ]
