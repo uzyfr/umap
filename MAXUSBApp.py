@@ -162,7 +162,10 @@ class MAXUSBApp(FacedancerApp):
         if self.verbose > 3:
             print(self.app_name, "read", len(resp.data) - 1, "bytes from register", reg)
 
-        return resp.data[1:]
+        try:
+          return resp.data[1:]
+        except:
+          return None
 
     def write_bytes(self, reg, data):
         data = bytes([ (reg << 3) | 3 ]) + data
