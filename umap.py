@@ -56,6 +56,7 @@ parser.add_option("-c", dest="cls", help="identify if a specific class on the co
 parser.add_option("-O", action="store_true", dest="osid", default=False, help="Operating system identification")
 parser.add_option("-e", dest="device", help="emulate a specific device (DEVICE=class:subclass:proto)")
 parser.add_option("-n", action="store_true", dest="netsocket", default=False, help="Start network server connected to the bulk endpoints (TCP port 2001)")
+parser.add_option("-V", action="store_true", dest="verbose", default=False, help="Set verbose mode")
 parser.add_option("-v", dest="vid", help="specify Vendor ID (hex format e.g. 1a2b)")
 parser.add_option("-p", dest="pid", help="specify Product ID (hex format e.g. 1a2b)")
 parser.add_option("-r", dest="rev", help="specify product Revision (hex format e.g. 1a2b)")
@@ -232,7 +233,12 @@ def execute_fuzz_testcase (device_class, device_subclass, device_proto, current_
     if device_class == 8:
         mode = 4    # Hack to get the Mass storage device to stop for each fuzz case
 
-    fd = Facedancer(sp, verbose=0)
+    #fd = Facedancer(sp, verbose=0)
+    verbose=0
+    if options.verbose:
+      print ("Verbose++")
+      verbose += 1
+    fd = Facedancer(sp, verbose)
     logfp = 0
     if options.log:
         logfp = fplog
@@ -283,6 +289,10 @@ def connect_as_image (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -313,6 +323,10 @@ def connect_as_cdc (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -337,6 +351,10 @@ def connect_as_iphone (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -361,6 +379,10 @@ def connect_as_audio (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -385,6 +407,10 @@ def connect_as_printer (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -410,6 +436,10 @@ def connect_as_keyboard (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -435,6 +465,10 @@ def connect_as_smartcard (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -465,6 +499,10 @@ def connect_as_vendor (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -490,6 +528,10 @@ def connect_as_hub (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
     fd = Facedancer(sp, verbose=ver1)
@@ -514,6 +556,10 @@ def connect_as_mass_storage (vid, pid, rev, mode):
     else:
         ver1 = 1
         ver2 = 4
+    if options.verbose:
+      print ("Verbose++")
+      ver1 += 1
+      ver2 += 1
 #    sp = connectserial()
     fake_testcase = ["dummy","",0] 
     fd = Facedancer(sp, verbose=ver1)
@@ -967,7 +1013,11 @@ if options.osid:
     # --- Attempt fingerprint ---
 #    sp = connectserial()
     fake_testcase = ["dummy","",0]
-    fd = Facedancer(sp, verbose=0)
+    verbose=0
+    if options.verbose:
+      print ("Verbose++")
+      verbose += 3
+    fd = Facedancer(sp, verbose)
     logfp = 0
     if options.log:
         logfp = fplog
