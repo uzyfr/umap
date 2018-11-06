@@ -48,6 +48,8 @@ class Facedancer:
         """Read a single command."""
 
         b = self.read(4)
+        if len(b) != 4:
+            return None
 
         app = b[0]
         verb = b[1]
@@ -161,6 +163,8 @@ class GoodFETMonitorApp(FacedancerApp):
 
         self.device.writecmd(cmd)
         resp = self.device.readcmd()
+        if resp == None:
+            return None
 
         return resp.data[0]
 
@@ -182,11 +186,15 @@ class GoodFETMonitorApp(FacedancerApp):
         self.device.writecmd(cmd)
 
         resp = self.device.readcmd()
+        if resp == None:
+            return
         print("build date:", resp.data.decode("utf-8"))
 
         print("firmware apps:")
         while True:
             resp = self.device.readcmd()
+            if resp == None:
+                break
             if len(resp.data) == 0:
                 break
             print(resp.data.decode("utf-8"))
@@ -198,6 +206,8 @@ class GoodFETMonitorApp(FacedancerApp):
         self.device.writecmd(cmd)
 
         resp = self.device.readcmd()
+        if resp == None:
+            return None
 
         return resp.data == b
 

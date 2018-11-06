@@ -98,6 +98,8 @@ class MAXUSBApp(FacedancerApp):
         self.device.writecmd(self.read_register_cmd)
     
         resp = self.device.readcmd()
+        if resp == None:
+            return None
 
         if self.verbose > 2:
             print(self.app_name, "read register 0x%02x has value 0x%02x" %
@@ -229,6 +231,8 @@ class MAXUSBApp(FacedancerApp):
 
         while self.stop == False:
             irq = self.read_register(self.reg_endpoint_irq)
+            if irq == None:
+                return
 
             if irq == tmp_irq:
                 count +=1

@@ -1001,8 +1001,11 @@ if options.osid:
 
             # --- If match is on a single item in a particular position ---
             elif match['match-type'] == 'match-pos':
-                if getattr("Dev:" + match['match-text'],match['match-condition'])(u.fingerprint[int(match['match-value'])]):
-                    numfpmatched += 1
+                try:
+                    if getattr("Dev:" + match['match-text'],match['match-condition'])(u.fingerprint[int(match['match-value'])]):
+                        numfpmatched += 1
+                except:
+                    next
 
             else:
                 print ("Unknown match type: %s" % match['match-type'])
