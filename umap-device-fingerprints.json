@@ -77,6 +77,26 @@
         { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 5}
     ]
 },
+{ "match-names" : ["HP BIOS version N76 VER. 01.06 11/01/2016 (frequency based signature)"],
+    "matches" : [
+        { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-count", "match-condition" : "__eq__", "match-value" : 8 }
+    ]
+},
+{ "match-names" : ["HP BIOS version N76 VER. 01.06 11/01/2016 (position based signature)"],
+    "matches" : [
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 5},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 6},
+        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 7}
+    ]
+},
 { "match-names" : ["American Megatrends BIOS Ver. 1.05.05 2017 (frequency based signature)"],
     "matches" : [
         { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
