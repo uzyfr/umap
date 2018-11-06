@@ -34,6 +34,25 @@
         { "match-type" : "match-count", "match-condition" : "__eq__", "match-value" : 8 }
     ]
 },
+{ "match-names" : ["Nintendo Switch (frequency based signature)"],
+    "matches" : [
+        { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-count", "match-condition" : "__eq__", "match-value" : 6 }
+    ]
+},
+{ "match-names" : ["Nintendo Switch (position based signature)"],
+    "matches" : [
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 5},
+        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 6}
+    ]
+},
 { "match-names" : ["AMI BIOS"],
     "matches" : [
         { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
@@ -41,25 +60,54 @@
         { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 2}
     ]
 },
-{ "match-names" : ["HP BIOS version 68IRR Ver. F.60 01/15/2015"],
+{ "match-names" : ["HP BIOS version 68IRR Ver. F.60 01/15/2015 (frequency based signature)"],
+    "matches" : [
+        { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-count", "match-condition" : "__eq__", "match-value" : 6 }
+    ]
+},
+{ "match-names" : ["HP BIOS version 68IRR Ver. F.60 01/15/2015 (position based signature)"],
     "matches" : [
         { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
-        { "match-type" : "match-pos", "match-text" : "SetAdr:2", "match-condition" : "__eq__", "match-value" : 1},
         { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
         { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
         { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
         { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 5}
     ]
 },
-{ "match-names" : ["Nintendo Switch"],
+{ "match-names" : ["American Megatrends BIOS Ver. 1.05.05 2017 (frequency based signature)"],
+    "matches" : [
+        { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
+        { "match-type" : "match-freq", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:1", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:2", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "GetDes:3:3", "match-condition" : "__eq__", "match-value" : 1},
+        { "match-type" : "match-count", "match-condition" : "__eq__", "match-value" : 11 }
+    ]
+},
+{ "match-names" : ["American Megatrends BIOS Ver. 1.05.05 2017 (position based signature)"],
     "matches" : [
         { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 0},
-        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 1},
-        { "match-type" : "match-pos", "match-text" : "SetAdr:2", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-pos", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
         { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 3},
-        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 4},
-        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 5},
-        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 6}
+        { "match-type" : "match-pos", "match-text" : "SetCon", "match-condition" : "__eq__", "match-value" : 4},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 5},
+        { "match-type" : "match-pos", "match-text" : "GetDes:2:0", "match-condition" : "__eq__", "match-value" : 6},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:0", "match-condition" : "__eq__", "match-value" : 7},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:1", "match-condition" : "__eq__", "match-value" : 8},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:2", "match-condition" : "__eq__", "match-value" : 9},
+        { "match-type" : "match-pos", "match-text" : "GetDes:3:3", "match-condition" : "__eq__", "match-value" : 10}
+    ]
+},
+{ "match-names" : ["GENERIC EXPERIMENTAL SIGNATURE FOR BIOS (frequency based signature)"],
+    "matches" : [
+        { "match-type" : "match-freq", "match-text" : "GetDes:1:0", "match-condition" : "__eq__", "match-value" : 2},
+        { "match-type" : "match-freq", "match-text" : "GetDes:2:0", "match-condition" : "__ge__", "match-value" : 1},
+        { "match-type" : "match-freq", "match-text" : "SetCon", "match-condition" : "__le__", "match-value" : 1}
     ]
 }
 ]
